@@ -1,0 +1,23 @@
+;; Object cpu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cpu/"
+  :tables
+  (list
+    (semanticdb-table "cache.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cpu/cache.h" include (:system-flag t) nil [296 318])
+            ("cache_coherent" function
+               (:arguments 
+                  ( ("" variable (:type ("Genode::addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [487 502])
+                    ("" variable (:type ("Genode::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [503 518]))                  
+                :type "void")
+                nil [467 522]))          
+      :file "cache.cc"
+      :pointmax 524
+      :fsize 523
+      :lastmodtime '(22314 61533 751276 171000)
+      :unmatched-syntax nil))
+  :file "!home!kenneth!genode!repos!base!src!base!cpu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

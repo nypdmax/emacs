@@ -1,0 +1,242 @@
+;; Object internal/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "internal/"
+  :tables (list 
+   (semanticdb-table "platform_env_common.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_INCLUDE__BASE__INTERNAL__PLATFORM_ENV_COMMON_H_" variable (:constant-flag t) nil [424 472])
+            ("base/env.h" include (:system-flag t) nil [474 495])
+            ("util/arg_string.h" include (:system-flag t) nil [496 524])
+            ("util/retry.h" include (:system-flag t) nil [525 548])
+            ("parent/client.h" include (:system-flag t) nil [549 575])
+            ("ram_session/client.h" include (:system-flag t) nil [576 607])
+            ("rm_session/client.h" include (:system-flag t) nil [608 638])
+            ("cpu_session/client.h" include (:system-flag t) nil [639 670])
+            ("pd_session/client.h" include (:system-flag t) nil [671 701])
+            ("Genode" type
+               (:members 
+                  ( ("Expanding_rm_session_client" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [724 758])
+                    ("Expanding_ram_session_client" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [760 795])
+                    ("Expanding_cpu_session_client" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [797 832])
+                    ("Expanding_parent_client" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [834 864])
+                    ("parent_cap" function
+                       (:prototype-flag t
+                        :type ("Parent_capability" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [867 898]))                  
+                :type "namespace")
+                nil [703 900])
+            ("Upgradeable_client" type
+               (:template 
+                  ( ("CLIENT" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("Capability" variable (:type "int") (reparse-symbol classsubparts) [1106 1117])
+                    ("_cap" variable (:type ("Capability" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1120 1136])
+                    ("Upgradeable_client" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cap" variable (:type ("Capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1158 1173]))                          
+                        :type ("Upgradeable_client" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1139 1202])
+                    ("upgrade_ram" function
+                       (:arguments 
+                          ( ("quota" variable (:type ("Genode::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1222 1243]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1205 1490]))                  
+                :superclasses 
+                  ( ("CLIENT" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  )
+                nil [982 1493])
+            ("Expanding_rm_session_client" type
+               (:parent "Genode"
+                :superclasses 
+                  ( ("Upgradeable_client" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("Expanding_rm_session_client" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cap" variable (:type ("Rm_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1619 1645]))                          
+                        :type ("Expanding_rm_session_client" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1591 1703])
+                    ("attach" function
+                       (:arguments 
+                          ( ("ds" variable (:type ("Dataspace_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1724 1748])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1749 1761])
+                            ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1762 1775])
+                            ("use_local_addr" variable (:type "bool") (reparse-symbol arg-sub-list) [1795 1815])
+                            ("local_addr" variable (:type ("Local_addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1816 1838])
+                            ("executable" variable (:type "bool") (reparse-symbol arg-sub-list) [1858 1874]))                          
+                        :type ("Local_addr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1706 2184])
+                    ("add_client" function
+                       (:arguments 
+                          ( ("thread" variable (:type ("Thread_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2215 2240]))                          
+                        :type ("Pager_capability" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2187 2389]))                  
+                :type "struct")
+                nil [1496 2392])
+            ("Expanding_ram_session_client" type
+               (:parent "Genode"
+                :superclasses 
+                  ( ("Upgradeable_client" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("Expanding_ram_session_client" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cap" variable (:type ("Ram_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2520 2547]))                          
+                        :type ("Expanding_ram_session_client" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2491 2606])
+                    ("alloc" function
+                       (:arguments 
+                          ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2640 2652])
+                            ("cached" variable (:type ("Cache_attribute" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2653 2677])
+                            ("" variable (:type ("UNCACHED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2678 2687]))                          
+                        :type ("Ram_dataspace_capability" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2609 3819])
+                    ("transfer_quota" function
+                       (:arguments 
+                          ( ("ram_session" variable (:type ("Ram_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3841 3876])
+                            ("amount" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3877 3891]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3822 4421]))                  
+                :type "struct")
+                nil [2395 4424])
+            ("Emergency_ram_reserve" type
+               (:members 
+                  ( ("release" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [4459 4486]))                  
+                :type "struct")
+                nil [4427 4489])
+            ("Expanding_parent_client" type
+               (:parent "Genode"
+                :superclasses 
+                  ( ("Parent_client" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [4556 4564])
+                    ("State" type
+                       (:members 
+                          ( ("UNDEFINED" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5123 5133])
+                            ("BLOCKING_DEFAULT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5134 5151])
+                            ("CUSTOM" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5152 5160]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [5110 5161])
+                    ("_state" variable (:type ("State" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5164 5193])
+                    ("_lock" variable (:type ("Lock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5255 5266])
+                    ("_fallback_sig_cap" function
+                       (:prototype-flag t
+                        :type ("Signal_context_capability" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5352 5398])
+                    ("_wait_for_resource_response" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [5487 5529])
+                    ("_emergency_ram_reserve" variable (:type ("Emergency_ram_reserve" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5685 5731])
+                    ("public" label nil (reparse-symbol classsubparts) [5734 5741])
+                    ("Expanding_parent_client" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cap" variable (:type ("Parent_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5769 5791])
+                            ("emergency_ram_reserve" variable
+                               (:reference 1
+                                :type ("Emergency_ram_reserve" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5818 5863]))                          
+                        :type ("Expanding_parent_client" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5745 5942])
+                    ("session" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Service_name" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6054 6079])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Session_args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6109 6134])
+                            ("affinity" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Affinity" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6164 6193]))                          
+                        :type ("Session_capability" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6027 6799])
+                    ("upgrade" function
+                       (:arguments 
+                          ( ("to_session" variable (:type ("Session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6816 6846])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Upgrade_args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6847 6872]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6803 7765])
+                    ("resource_avail_sigh" function
+                       (:arguments 
+                          ( ("sigh" variable (:type ("Signal_context_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7794 7825]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7769 8298])
+                    ("resource_request" function
+                       (:arguments 
+                          ( ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Resource_args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8324 8350]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8302 9067]))                  
+                :type "class")
+                nil [4492 9070]))          
+    :file "platform_env_common.h"
+    :pointmax 9134
+    :fsize 9133
+    :lastmodtime '(22316 23932 292465 750000)
+    :unmatched-syntax '((punctuation 2676 . 2677) (punctuation 1104 . 1105) (symbol 1091 . 1104) (punctuation 1090 . 1091) (punctuation 1089 . 1090) (symbol 1083 . 1089) (TYPENAME 1074 . 1082) (punctuation 1073 . 1074) (symbol 1063 . 1073) (punctuation 1062 . 1063) (punctuation 1061 . 1062) (symbol 1055 . 1061) (TYPEDEF 1047 . 1054))
+    :lexical-table 
+        '(("_INCLUDE__BASE__INTERNAL__PLATFORM_ENV_COMMON_H_")
+          )
+
+    )
+   )
+  :file "!home!cheng!vault!genode!repos!base!src!include!base!internal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

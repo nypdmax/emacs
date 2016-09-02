@@ -1,0 +1,244 @@
+;; Object base/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "base/"
+  :tables (list 
+   (semanticdb-table "native_types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_INCLUDE__BASE__NATIVE_TYPES_H_" variable (:constant-flag t) nil [338 369])
+            ("base/cap_map.h" include (:system-flag t) nil [371 396])
+            ("Fiasco" type
+               (:members 
+                  ( ("Cap_selectors" type
+                       (:members 
+                          ( ("TASK_CAP" variable
+                               (:constant-flag t
+                                :default-value (717 734)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [698 734])
+                            ("PARENT_CAP" variable
+                               (:constant-flag t
+                                :default-value (1049 1058)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1030 1058])
+                            ("L4_CAP_SHIFT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1060 1073])
+                            ("THREAD_AREA_BASE" variable
+                               (:constant-flag t
+                                :default-value (1363 1372)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1344 1372])
+                            ("L4_CAP_SHIFT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1374 1387])
+                            ("THREAD_AREA_SLOT" variable
+                               (:constant-flag t
+                                :default-value (1437 1446)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1418 1446])
+                            ("L4_CAP_SHIFT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1448 1461])
+                            ("THREAD_GATE_CAP" variable
+                               (:constant-flag t
+                                :default-value (1513 1514)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1494 1514])
+                            ("THREAD_PAGER_CAP" variable
+                               (:constant-flag t
+                                :default-value (1662 1671)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1643 1671])
+                            ("L4_CAP_SHIFT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1673 1686])
+                            ("THREAD_IRQ_CAP" variable
+                               (:constant-flag t
+                                :default-value (1808 1817)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1789 1817])
+                            ("L4_CAP_SHIFT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1819 1832])
+                            ("MAIN_THREAD_CAP" variable
+                               (:constant-flag t
+                                :default-value (1952 1987)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1933 1987])
+                            ("USER_BASE_CAP" variable
+                               (:constant-flag t
+                                :default-value (2361 2370)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2342 2370])
+                            ("L4_CAP_SHIFT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2372 2385]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [522 2389])
+                    ("Utcb_regs" type
+                       (:members 
+                          ( ("UTCB_TCR_BADGE" variable
+                               (:constant-flag t
+                                :default-value (2433 2434)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2411 2434])
+                            ("UTCB_TCR_THREAD_OBJ" variable
+                               (:constant-flag t
+                                :default-value (2460 2461)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2438 2461]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [2392 2465])
+                    ("Capability" type
+                       (:members 
+                          ( ("valid" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("idx" variable (:type ("l4_cap_idx_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2509 2526]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2491 2581]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2468 2585]))                  
+                :type "namespace")
+                nil [398 2588])
+            ("Genode" type
+               (:members 
+                  ( ("Native_thread_id" type
+                       (:typedef ("Fiasco::l4_cap_idx_t" type (:type "class") nil nil)
+                        :superclasses "Fiasco::l4_cap_idx_t"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2611 2657])
+                    ("Native_thread" type
+                       (:members 
+                          ( ("kcap" variable (:type ("Fiasco::l4_cap_idx_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2687 2717])
+                            ("Native_thread" function
+                               (:constructor-flag t
+                                :type ("Native_thread" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2721 2740])
+                            ("Native_thread" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("kcap" variable (:type ("Fiasco::l4_cap_idx_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2766 2792]))                                  
+                                :type ("Native_thread" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2752 2809]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2661 2813])
+                    ("Native_task" type
+                       (:typedef ("Fiasco::l4_cap_idx_t" type (:type "class") nil nil)
+                        :superclasses "Fiasco::l4_cap_idx_t"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2817 2858])
+                    ("Native_capability" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3094 3101])
+                            ("Dst" type
+                               (:typedef ("Fiasco::l4_cap_idx_t" type (:type "class") nil nil)
+                                :superclasses "Fiasco::l4_cap_idx_t"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3106 3139])
+                            ("Raw" type
+                               (:members 
+                                  ( ("dst" variable (:type ("Dst" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3164 3173])
+                                    ("local_name" variable (:type "long") (reparse-symbol classsubparts) [3178 3194]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [3144 3200])
+                            ("private" label nil (reparse-symbol classsubparts) [3204 3212])
+                            ("_idx" variable
+                               (:pointer 1
+                                :type ("Cap_index" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3217 3233])
+                            ("protected" label nil (reparse-symbol classsubparts) [3237 3247])
+                            ("_inc" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3252 3312])
+                            ("_dec" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3317 3413])
+                            ("public" label nil (reparse-symbol classsubparts) [3417 3424])
+                            ("Native_capability" function
+                               (:constructor-flag t
+                                :type ("Native_capability" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3499 3532])
+                            ("Native_capability" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("idx" variable
+                                       (:pointer 1
+                                        :type ("Cap_index" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3605 3620]))                                  
+                                :type ("Native_capability" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3587 3648])
+                            ("Native_capability" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("o" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Native_capability" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3671 3698]))                                  
+                                :type ("Native_capability" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3653 3728])
+                            ("Native_capability" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3733 3765])
+                            ("idx" function
+                               (:pointer 1
+                                :type ("Cap_index" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3840 3879])
+                            ("==" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("o" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Native_capability" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3952 3979]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3936 4016])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("o" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Native_capability" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4050 4077]))                                  
+                                :type ("Native_capability" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4021 4184])
+                            ("local_name" function (:type "long") (reparse-symbol classsubparts) [4335 4400])
+                            ("dst" function (:type ("Dst" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4404 4473])
+                            ("valid" function (:type "bool") (reparse-symbol classsubparts) [4477 4542]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3065 4546])
+                    ("Native_connection_state" type
+                       (:typedef ("int")
+                        :superclasses "int"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4550 4586]))                  
+                :type "namespace")
+                nil [2590 4588]))          
+    :file "native_types.h"
+    :pointmax 4635
+    :fsize 4634
+    :lastmodtime '(22316 23932 184465 751000)
+    :unmatched-syntax '((EXPLICIT 2743 . 2751) (punctuation 2370 . 2371) (punctuation 2369 . 2370) (punctuation 1817 . 1818) (punctuation 1816 . 1817) (punctuation 1671 . 1672) (punctuation 1670 . 1671) (punctuation 1446 . 1447) (punctuation 1445 . 1446) (punctuation 1372 . 1373) (punctuation 1371 . 1372) (punctuation 1058 . 1059) (punctuation 1057 . 1058) (spp-system-include "l4/sys/task.h" 495 . 519) (spp-system-include "l4/sys/utcb.h" 470 . 494) (spp-system-include "l4/sys/types.h" 444 . 469) (spp-system-include "l4/sys/consts.h" 417 . 443))
+    :lexical-table 
+        '(("_INCLUDE__BASE__NATIVE_TYPES_H_")
+          )
+
+    )
+   )
+  :file "!home!cheng!vault!genode!repos!base-foc!include!base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

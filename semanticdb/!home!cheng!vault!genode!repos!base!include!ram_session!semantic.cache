@@ -1,0 +1,219 @@
+;; Object ram_session/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ram_session/"
+  :tables (list 
+   (semanticdb-table "ram_session.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_INCLUDE__RAM_SESSION__RAM_SESSION_H_" variable (:constant-flag t) nil [331 368])
+            ("base/stdint.h" include (:system-flag t) nil [370 394])
+            ("base/capability.h" include (:system-flag t) nil [395 423])
+            ("base/exception.h" include (:system-flag t) nil [424 451])
+            ("base/cache.h" include (:system-flag t) nil [452 475])
+            ("dataspace/capability.h" include (:system-flag t) nil [476 509])
+            ("ram_session/capability.h" include (:system-flag t) nil [510 545])
+            ("session/session.h" include (:system-flag t) nil [546 574])
+            ("Genode" type
+               (:members 
+                  ( ("Ram_dataspace" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [597 618])
+                    ("Ram_dataspace_capability" type
+                       (:typedef ("Capability" type
+                             (:template-specifier 
+                                ( ("Ram_dataspace" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "Capability"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [620 679])
+                    ("Ram_session" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [682 701]))                  
+                :type "namespace")
+                nil [576 703])
+            ("Ram_dataspace" type
+               (:parent "Genode"
+                :superclasses 
+                  ( ("Dataspace" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :type "struct")
+                nil [706 751])
+            ("Ram_session" type
+               (:parent "Genode"
+                :superclasses 
+                  ( ("Session" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("service_name" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [827 878])
+                    ("Alloc_failed" type
+                       (:superclasses 
+                          ( ("Exception" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [956 1004])
+                    ("Quota_exceeded" type
+                       (:superclasses 
+                          ( ("Alloc_failed" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [1006 1054])
+                    ("Out_of_metadata" type
+                       (:superclasses 
+                          ( ("Alloc_failed" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [1056 1104])
+                    ("Ram_session" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1132 1158])
+                    ("alloc" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1512 1524])
+                            ("cached" variable (:type ("Cache_attribute" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1565 1589])
+                            ("" variable (:type ("CACHED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1590 1597]))                          
+                        :type ("Ram_dataspace_capability" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1473 1602])
+                    ("free" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ds" variable (:type ("Ram_dataspace_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1717 1745]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1699 1750])
+                    ("ref_account" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ram_session" variable (:type ("Ram_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2078 2113]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2054 2118])
+                    ("transfer_quota" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ram_session" variable (:type ("Ram_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2476 2511])
+                            ("amount" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2512 2526]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2449 2531])
+                    ("quota" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2575 2602])
+                    ("used" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2637 2663])
+                    ("avail" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2713 2795])
+                    ("GENODE_RPC_THROW" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_alloc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2890 2900])
+                            ("" variable (:type ("Ram_dataspace_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2901 2926])
+                            ("" variable (:type ("alloc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2927 2933])
+                            ("" variable (:type ("GENODE_TYPE_LIST" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2952 3001])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3021 3028])
+                            ("" variable (:type ("Cache_attribute" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3029 3045]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2873 3046])
+                    ("GENODE_RPC" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_free" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3059 3068])
+                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [3069 3074])
+                            ("" variable (:type ("free" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3075 3080])
+                            ("" variable (:type ("Ram_dataspace_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3081 3106]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3048 3107])
+                    ("GENODE_RPC" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_ref_account" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3120 3136])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [3137 3141])
+                            ("" variable (:type ("ref_account" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3142 3154])
+                            ("" variable (:type ("Ram_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3155 3178]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3109 3179])
+                    ("GENODE_RPC" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_transfer_quota" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3192 3211])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [3212 3216])
+                            ("" variable (:type ("transfer_quota" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3217 3232])
+                            ("" variable (:type ("Ram_session_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3233 3256])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3257 3264]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3181 3265])
+                    ("GENODE_RPC" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_quota" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3278 3288])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3289 3296])
+                            ("" variable (:type ("quota" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3297 3303]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3267 3304])
+                    ("GENODE_RPC" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_used" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3317 3326])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3327 3334])
+                            ("" variable (:type ("used" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3335 3340]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3306 3341])
+                    ("GENODE_RPC_INTERFACE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Rpc_alloc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3365 3375])
+                            ("" variable (:type ("Rpc_free" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3376 3385])
+                            ("" variable (:type ("Rpc_ref_account" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3386 3402])
+                            ("" variable (:type ("Rpc_transfer_quota" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3425 3444])
+                            ("" variable (:type ("Rpc_quota" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3445 3455])
+                            ("" variable (:type ("Rpc_used" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3456 3465]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3344 3466]))                  
+                :type "struct")
+                nil [787 3469]))          
+    :file "ram_session.h"
+    :pointmax 3522
+    :fsize 3521
+    :lastmodtime '(22316 23932 248465 750000)
+    :unmatched-syntax '((semantic-list 2968 . 3001) (punctuation 1588 . 1589))
+    :lexical-table 
+        '(("_INCLUDE__RAM_SESSION__RAM_SESSION_H_")
+          )
+
+    )
+   )
+  :file "!home!cheng!vault!genode!repos!base!include!ram_session!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

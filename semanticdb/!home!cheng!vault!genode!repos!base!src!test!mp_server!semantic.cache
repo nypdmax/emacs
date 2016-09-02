@@ -1,0 +1,175 @@
+;; Object mp_server/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mp_server/"
+  :tables (list 
+   (semanticdb-table "main.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("base/printf.h" include (:system-flag t) nil [373 397])
+            ("base/thread.h" include (:system-flag t) nil [398 422])
+            ("base/env.h" include (:system-flag t) nil [423 444])
+            ("base/sleep.h" include (:system-flag t) nil [445 468])
+            ("cap_session/connection.h" include (:system-flag t) nil [470 505])
+            ("base/rpc_server.h" include (:system-flag t) nil [506 534])
+            ("Test" type
+               (:members 
+                  ( ("Session" type
+                       (:superclasses 
+                          ( ("Genode::Session" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("service_name" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [641 700])
+                            ("GENODE_RPC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Rpc_test_untyped" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [715 732])
+                                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [733 738])
+                                    ("" variable (:type ("test_untyped" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [739 752])
+                                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [753 762]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [704 763])
+                            ("GENODE_RPC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Rpc_test_cap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [777 790])
+                                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [791 796])
+                                    ("" variable (:type ("test_cap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [797 806])
+                                    ("" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [807 833]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [766 834])
+                            ("GENODE_RPC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Rpc_test_cap_reply" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [848 867])
+                                    ("" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [868 894])
+                                    ("" variable (:type ("test_cap_reply" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [908 923])
+                                    ("" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [924 950]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [837 951])
+                            ("GENODE_RPC_INTERFACE" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Rpc_test_untyped" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [975 992])
+                                    ("" variable (:type ("Rpc_test_cap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [993 1006])
+                                    ("" variable (:type ("Rpc_test_cap_reply" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1007 1026]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [954 1027]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [603 1031])
+                    ("Client" type
+                       (:superclasses 
+                          ( ("Genode::Rpc_client" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("Client" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("cap" variable (:type ("Capability" type
+                                         (:template-specifier 
+                                            ( ("Session" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1090 1114]))                                  
+                                :type ("Client" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1083 1145])
+                            ("test_untyped" function
+                               (:arguments 
+                                  ( ("value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1167 1182]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1149 1217])
+                            ("test_cap" function
+                               (:arguments 
+                                  ( ("cap" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1234 1264]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1220 1293])
+                            ("test_cap_reply" function
+                               (:arguments 
+                                  ( ("cap" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1337 1367]))                                  
+                                :type ("Genode::Native_capability" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1296 1412]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1034 1416])
+                    ("Component" type
+                       (:superclasses 
+                          ( ("Genode::Rpc_object" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("test_untyped" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1554 1563]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1536 1564])
+                            ("test_cap" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1638 1664]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1624 1665])
+                            ("test_cap_reply" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1772 1798]))                                  
+                                :type ("Genode::Native_capability" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1731 1799]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1419 1803])
+                    ("Capability" type
+                       (:typedef ("Genode::Capability" type
+                             (:template-specifier 
+                                ( ("Session" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "Genode::Capability"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1806 1853])
+                    ("test_untyped" function
+                       (:parent "Component"
+                        :arguments 
+                          ( ("value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1922 1937]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1893 2012])
+                    ("test_cap" function
+                       (:parent "Component"
+                        :arguments 
+                          ( ("cap" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2040 2070]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2015 2240])
+                    ("test_cap_reply" function
+                       (:parent "Component"
+                        :arguments 
+                          ( ("cap" variable (:type ("Genode::Native_capability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2295 2325]))                          
+                        :type ("Genode::Native_capability" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2243 2509]))                  
+                :type "namespace")
+                nil [536 2511])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2589 2598])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2599 2611]))                  
+                :type "int")
+                nil [2580 4546]))          
+    :file "main.cc"
+    :pointmax 4547
+    :fsize 4546
+    :lastmodtime '(22316 23932 312465 749000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!cheng!vault!genode!repos!base!src!test!mp_server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

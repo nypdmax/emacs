@@ -1,0 +1,49 @@
+;; Object cheng/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cheng/"
+  :tables (list 
+   (semanticdb-table "aligned.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("uint8" type
+               (:typedef ("unsigned char")
+                :superclasses "unsigned char"
+                :type "typedef")
+                nil [21 49])
+            ("uint16" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [50 80])
+            ("uint32" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [81 109])
+            ("foo" variable (:type ("" type
+                 (:members 
+                    ( ("a" variable (:type ("uint16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [121 130])
+                      ("b" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [132 141])
+                      ("c" variable (:type ("uint8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [143 151]))                    
+                  :type "struct")
+                  nil nil)) nil [111 157])
+            ("bar" variable (:type ("" type
+                 (:members 
+                    ( ("b" variable (:type ("uint32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [169 178])
+                      ("a" variable (:type ("uint16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [180 189])
+                      ("c" variable (:type ("uint8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [191 199]))                    
+                  :type "struct")
+                  nil nil)) nil [159 205])
+            ("main" function (:type "int") nil [207 420]))          
+    :file "aligned.c"
+    :pointmax 421
+    :fsize 336
+    :lastmodtime '(22299 12564 645692 623000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!cheng!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
